@@ -192,14 +192,15 @@ li {
 .bg-logo {
     flex-basis: 40%;
     position: relative;
+    z-index: 0;
 }
 
 img {
-    max-width: 100%;
     height: 450px;
     position: absolute;
     top: -25px;
     bottom: -25px;
+    z-index: 0;
 }
 
 </style>
