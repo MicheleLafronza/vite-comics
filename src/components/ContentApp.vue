@@ -24,6 +24,6 @@ main {
 .content {
     color: white;
     font-size: 2rem;
-    padding: 30px;
+    padding: 20px;
 }
 </style>
