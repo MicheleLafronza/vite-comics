@@ -67,8 +67,11 @@
 </template>
 
 <style lang="scss" scoped>
+@use '/src/style/partials/variables' as *;
+
+
 header {
-    background-color: white;
+    background-color: $white;
 }
 
 .container {
