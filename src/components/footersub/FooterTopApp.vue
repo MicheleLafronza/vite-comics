@@ -50,6 +50,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
 .container {
     padding: 50px;
 }
