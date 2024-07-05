@@ -4,7 +4,7 @@
         name: "FooterBotApp",
         data() {
             return {
-
+                footerLinks: ['src/assets/footer-facebook.png', 'src/assets/footer-twitter.png', 'src/assets/footer-youtube.png', 'src/assets/footer-pinterest.png', 'src/assets/footer-periscope.png']
             }
         }
     }
@@ -23,8 +23,8 @@
 
         <div class="links-container">
             <a class="link-text" href="">FOLLOW US</a>
-            <a class="link-icons" href="#">
-                <img src="../../assets/footer-facebook.png" alt="">
+            <a v-for="(link, index) in footerLinks" :key="index" class="link-icons" href="#">
+                <img :src="link" alt="">
             </a>
         </div>
     </div>
