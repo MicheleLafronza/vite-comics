@@ -56,7 +56,7 @@
         <div class="menu">
             <ul>
                 <li v-for="(link, index) in links" :key="index">
-                    {{ link.text }}
+                    <a href="#"><span>{{ link.text }}</span></a>
                 </li>
             </ul>
         </div>
@@ -92,10 +92,26 @@ ul {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
 
     li {
         cursor: pointer;
+        position: relative;
+
+        a {
+            height: 123px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            
+            
+            &:hover {
+                color: rgba(2,130,249,255);
+                border-bottom: 3px solid rgba(2,130,249,255);
+            }
+
+        }
     }
 }
 </style>

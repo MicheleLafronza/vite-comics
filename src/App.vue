@@ -2,7 +2,10 @@
 import HeaderApp from './components/HeaderApp.vue';
 import ContentApp from './components/ContentApp.vue';
 import FooterApp from './components/FooterApp.vue';
+
+
 export default {
+  name: "App",
   components: {
     HeaderApp,
     ContentApp,
