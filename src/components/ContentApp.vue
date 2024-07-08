@@ -1,7 +1,12 @@
 <script>
+import ComicCardApp from './card/ComicCardApp.vue'
 
     export default {
         name: "ContentApp",
+        components: {
+            ComicCardApp,
+        },
+
         data() {
             return {
                 seriesList: [
@@ -80,28 +85,78 @@
                 ]
             }
         }
-    }
+    };
 
 </script>
 
 <template>
     <main>
+        <div>
+            <img class="jumbo" src="/src/assets/jumbotron.jpg" alt="">
+        </div>
+
+
+        <div class="container card-grid">
+            <button id="current-series-button">CURRENT SERIES</button>
+
+            <ComicCardApp v-for="(comic, index) in seriesList" :key="index" :item="comic"/>
+        </div>
+
         <div class="container">
-            <div class="content">
-                CONTENT GOES HERE
-            </div>
+            <button>LOAD MORE</button>
         </div>
     </main>
 </template>
 
 <style lang="scss" scoped>
+@use '/src/style/partials/variables' as *;
+
+.jumbo {
+    max-width: 100%;
+}
+
 main {
     background-color: black;
 }
 
-.content {
-    color: white;
-    font-size: 2rem;
-    padding: 20px;
+.card-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
 }
+
+button {
+    width: 15%;
+    background-color: $primary;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor:pointer;
+}
+
+.container {
+    padding-bottom: 20px;
+}
+
+#current-series-button {
+    width: 15%;
+    background-color: $primary;
+    display: block;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    cursor:pointer;
+    position: absolute;
+    top: -30px;
+    left: 12px;
+    font-weight: bold;
+}
+
 </style>

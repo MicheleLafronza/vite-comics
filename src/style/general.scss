@@ -1,8 +1,13 @@
 // GENERAL RULES
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container {

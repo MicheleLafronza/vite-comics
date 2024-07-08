@@ -196,11 +196,12 @@ li {
 }
 
 img {
-    height: 450px;
+    height: 115%;
     position: absolute;
     top: -25px;
     bottom: -25px;
     z-index: 0;
+    max-width: 100%;
 }
 
 </style>

@@ -4,6 +4,7 @@ import ContentApp from './components/ContentApp.vue';
 import FooterApp from './components/FooterApp.vue';
 
 
+
 export default {
   name: "App",
   components: {
